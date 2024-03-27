@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Series Data</title>
+    <style>
+        /* Add your CSS styles here */
+    </style>
+</head>
+<body>
+    <h1>Time Series Data for <%= data.symbol %></h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Open</th>
+                <th>High</th>
+                <th>Low</th>
+                <th>Close</th>
+                <!-- Add more table headers as needed -->
+            </tr>
+        </thead>
+        <tbody>
+            <% data.forEach(entry => { %>
+                <tr>
+                    <td><%= entry.date %></td>
+                    <td><%= entry.open %></td>
+                    <td><%= entry.high %></td>
+                    <td><%= entry.low %></td>
+                    <td><%= entry.close %></td>
+                    <!-- Add more table cells for additional data fields -->
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>
